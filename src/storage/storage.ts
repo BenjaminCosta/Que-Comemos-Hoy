@@ -11,13 +11,30 @@ export const loadFoods = async (): Promise<Food[]> => {
     const data = await AsyncStorage.getItem(FOODS_KEY);
     if (data) {
       const loadedFoods = JSON.parse(data);
-      // Ensure all foods have isActive field (migration for existing data)
-      // Force custom foods to use food.png icon
-      return loadedFoods.map((food: Food) => ({
-        ...food,
-        isActive: food.isActive !== undefined ? food.isActive : true, // Default to active if not set
-        iconSource: food.isDefault ? food.iconSource : require('../../assets/food_icons/food.png'),
-      }));
+      // Merge with DEFAULT_FOODS to get updated fields (like imageSource)
+      const mergedFoods = loadedFoods.map((savedFood: Food) => {
+        // Find matching default food to get updated data
+        const defaultFood = DEFAULT_FOODS.find(df => df.id === savedFood.id);
+        
+        if (defaultFood) {
+          // Merge: keep saved state (isActive) but update with new fields from DEFAULT_FOODS
+          return {
+            ...defaultFood, // Get all updated fields (imageSource, recipe, etc.)
+            isActive: savedFood.isActive !== undefined ? savedFood.isActive : true,
+          };
+        }
+        
+        // For custom foods, ensure they have the custom icon
+        return {
+          ...savedFood,
+          isActive: savedFood.isActive !== undefined ? savedFood.isActive : true,
+          iconSource: savedFood.isDefault ? savedFood.iconSource : require('../../assets/food_icons/food.png'),
+        };
+      });
+      
+      // Save merged data back to storage
+      await saveFoods(mergedFoods);
+      return mergedFoods;
     }
     // First time: randomize 5 active foods and save
     const randomizedFoods = randomizeFiveActiveFoods(DEFAULT_FOODS);

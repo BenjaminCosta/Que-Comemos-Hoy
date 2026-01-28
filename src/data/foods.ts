@@ -1,5 +1,6 @@
 import { Food } from '../types';
 import { FOOD_ICONS } from './foodIcons';
+import { FOOD_IMAGES } from './foodImages';
 
 export const CUSTOM_FOOD_COLORS = [
   '#4D96FF', // Primary celeste
@@ -18,6 +19,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Hamburguesas',
     color: '#E74C3C',
     iconSource: FOOD_ICONS.burger,
+    imageSource: FOOD_IMAGES.hamburguer,
     isDefault: true,
     isActive: false, // Will be randomly assigned on first load
     recipe: {
@@ -36,6 +38,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Tostar los panes ligeramente',
         'Armar con lechuga, tomate y tu salsa favorita',
       ],
+      time: '20 minutos',
+      difficulty: 'Fácil',
     },
   },
   {
@@ -43,6 +47,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Pizza',
     color: '#F39C12',
     iconSource: FOOD_ICONS.pizza,
+    imageSource: FOOD_IMAGES.pizza,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -60,6 +65,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Espolvorear orégano',
         'Hornear a 220°C por 15-20 minutos',
       ],
+      time: '30 minutos',
+      difficulty: 'Fácil',
     },
   },
   {
@@ -67,6 +74,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Empanadas',
     color: '#C0392B',
     iconSource: FOOD_ICONS.empanadas,
+    imageSource: FOOD_IMAGES.empanada,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -85,6 +93,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Rellenar las tapas y repulgar',
         'Hornear a 200°C por 20-25 minutos',
       ],
+      time: '45 minutos',
+      difficulty: 'Media',
     },
   },
   {
@@ -92,6 +102,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Pasta',
     color: '#27AE60',
     iconSource: FOOD_ICONS.pasta,
+    imageSource: FOOD_IMAGES.pasta,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -107,6 +118,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Escurrir y mezclar con la salsa',
         'Servir con queso rallado',
       ],
+      time: '15 minutos',
+      difficulty: 'Fácil',
     },
   },
   {
@@ -114,6 +127,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Guiso',
     color: '#8E5A2A',
     iconSource: FOOD_ICONS.guiso,
+    imageSource: FOOD_IMAGES.guiso,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -133,6 +147,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Cubrir con caldo y cocinar 30 minutos',
         'Agregar arroz o fideos y cocinar hasta que estén tiernos',
       ],
+      time: '50 minutos',
+      difficulty: 'Media',
     },
   },
   {
@@ -140,6 +156,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Tarta',
     color: '#16A085',
     iconSource: FOOD_ICONS.tarta,
+    imageSource: FOOD_IMAGES.tarta,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -157,6 +174,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Cubrir con la segunda tapa',
         'Hornear a 180°C por 35-40 minutos',
       ],
+      time: '40 minutos',
+      difficulty: 'Fácil',
     },
   },
   {
@@ -164,6 +183,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Polenta',
     color: '#F4D03F',
     iconSource: FOOD_ICONS.polenta,
+    imageSource: FOOD_IMAGES.polenta,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -180,6 +200,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Cocinar 30-40 minutos hasta espesar',
         'Servir con salsa y queso',
       ],
+      time: '45 minutos',
+      difficulty: 'Media',
     },
   },
   {
@@ -187,6 +209,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Sushi',
     color: '#5DADE2',
     iconSource: FOOD_ICONS.sushi,
+    imageSource: FOOD_IMAGES.sushi,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -204,6 +227,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Agregar relleno y enrollar firmemente',
         'Cortar en porciones y servir con salsa',
       ],
+      time: '60 minutos',
+      difficulty: 'Difícil',
     },
   },
   {
@@ -211,6 +236,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Tacos',
     color: '#9B59B6',
     iconSource: FOOD_ICONS.taco,
+    imageSource: FOOD_IMAGES.tacos,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -229,6 +255,8 @@ export const DEFAULT_FOODS: Food[] = [
         'Agregar lechuga, tomate y queso',
         'Servir con salsa picante',
       ],
+      time: '25 minutos',
+      difficulty: 'Fácil',
     },
   },
   {
@@ -236,6 +264,7 @@ export const DEFAULT_FOODS: Food[] = [
     name: 'Milanesa',
     color: '#EC7063',
     iconSource: FOOD_ICONS.milanesa,
+    imageSource: FOOD_IMAGES.milanesa,
     isDefault: true,
     isActive: false,
     recipe: {
@@ -254,6 +283,148 @@ export const DEFAULT_FOODS: Food[] = [
         'Freír en aceite caliente hasta dorar',
         'Servir con limón y tu guarnición favorita',
       ],
+      time: '25 minutos',
+      difficulty: 'Fácil',
+    },
+  },
+  {
+    id: 'panchos',
+    name: 'Panchos',
+    color: '#E74C3C',
+    iconSource: FOOD_ICONS.hotdog,
+    imageSource: FOOD_IMAGES.hotdog,
+    isDefault: true,
+    isActive: false,
+    recipe: {
+      ingredients: [
+        '4 salchichas',
+        '4 panes para panchos',
+        'Mostaza',
+        'Ketchup',
+        'Mayonesa',
+        'Cebolla caramelizada (opcional)',
+      ],
+      steps: [
+        'Cocinar las salchichas en agua hirviendo o a la parrilla',
+        'Calentar los panes ligeramente',
+        'Colocar las salchichas en los panes',
+        'Agregar mostaza, ketchup y mayonesa al gusto',
+        'Decorar con cebolla caramelizada si se desea',
+      ],
+      time: '15 minutos',
+      difficulty: 'Fácil',
+    },
+  },
+  {
+    id: 'pollo',
+    name: 'Pollo',
+    color: '#F5B7B1',
+    iconSource: FOOD_ICONS.chicken,
+    imageSource: FOOD_IMAGES.chicken,
+    isDefault: true,
+    isActive: false,
+    recipe: {
+      ingredients: [
+        '4 pechugas de pollo',
+        '2 dientes de ajo',
+        'Limón',
+        'Aceite de oliva',
+        'Sal y pimienta',
+        'Hierbas (romero, tomillo)',
+      ],
+      steps: [
+        'Salpimentar las pechugas de pollo',
+        'Marinar con ajo picado, limón y aceite por 30 minutos',
+        'Cocinar en plancha o sartén a fuego medio',
+        'Cocinar 6-7 minutos por lado hasta dorar',
+        'Dejar reposar 5 minutos antes de servir',
+      ],
+      time: '45 minutos',
+      difficulty: 'Fácil',
+    },
+  },
+  {
+    id: 'ensalada',
+    name: 'Ensalada',
+    color: '#2ECC71',
+    iconSource: FOOD_ICONS.salad,
+    imageSource: FOOD_IMAGES.salad,
+    isDefault: true,
+    isActive: false,
+    recipe: {
+      ingredients: [
+        'Lechuga',
+        'Tomate',
+        'Zanahoria',
+        'Pepino',
+        'Aceite de oliva',
+        'Vinagre o limón',
+        'Sal y pimienta',
+      ],
+      steps: [
+        'Lavar y cortar todas las verduras',
+        'Mezclar en un bowl grande',
+        'Preparar aderezo con aceite, vinagre, sal y pimienta',
+        'Agregar el aderezo justo antes de servir',
+        'Mezclar bien y disfrutar',
+      ],
+      time: '10 minutos',
+      difficulty: 'Fácil',
+    },
+  },
+  {
+    id: 'sandwich',
+    name: 'Sándwich',
+    color: '#5DADE2',
+    iconSource: FOOD_ICONS.sandwich,
+    imageSource: FOOD_IMAGES.sandwich,
+    isDefault: true,
+    isActive: false,
+    recipe: {
+      ingredients: [
+        'Pan de sándwich o baguette',
+        'Jamón y queso',
+        'Lechuga',
+        'Tomate',
+        'Mayonesa o mostaza',
+        'Manteca o aceite',
+      ],
+      steps: [
+        'Untar el pan con manteca o mayonesa',
+        'Colocar jamón y queso',
+        'Agregar lechuga y tomate en rodajas',
+        'Cerrar el sándwich',
+        'Tostar en sándwichera o plancha si se desea',
+      ],
+      time: '10 minutos',
+      difficulty: 'Fácil',
+    },
+  },
+  {
+    id: 'omelette',
+    name: 'Omelette',
+    color: '#D4AC0D',
+    iconSource: FOOD_ICONS.omelette,
+    imageSource: FOOD_IMAGES.omelette,
+    isDefault: true,
+    isActive: false,
+    recipe: {
+      ingredients: [
+        '3 huevos',
+        'Sal y pimienta',
+        'Manteca',
+        'Queso rallado',
+        'Jamón, champiñones o vegetales (opcional)',
+      ],
+      steps: [
+        'Batir los huevos con sal y pimienta',
+        'Calentar sartén con manteca a fuego medio',
+        'Verter los huevos y cocinar sin revolver',
+        'Cuando esté semicuajado, agregar relleno de un lado',
+        'Doblar por la mitad y servir caliente',
+      ],
+      time: '10 minutos',
+      difficulty: 'Fácil',
     },
   },
 ];

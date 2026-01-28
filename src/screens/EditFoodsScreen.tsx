@@ -32,6 +32,11 @@ const FOOD_ICON_ASSETS = {
   sushi: require('../../assets/food_icons/sushi.png'),
   tacos: require('../../assets/food_icons/taco.png'),
   milanesa: require('../../assets/food_icons/milanesa.png'),
+  panchos: require('../../assets/food_icons/hotdog.png'),
+  pollo: require('../../assets/food_icons/chicken.png'),
+  ensalada: require('../../assets/food_icons/salad.png'),
+  sandwich: require('../../assets/food_icons/sandwich.png'),
+  omelette: require('../../assets/food_icons/omelette.png'),
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'EditFoods'>;

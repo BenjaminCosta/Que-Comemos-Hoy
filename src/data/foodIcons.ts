@@ -10,4 +10,9 @@ export const FOOD_ICONS = {
   sushi: require('../../assets/food_icons/sushi.png'),
   taco: require('../../assets/food_icons/taco.png'),
   milanesa: require('../../assets/food_icons/milanesa.png'),
+  hotdog: require('../../assets/food_icons/hotdog.png'),
+  chicken: require('../../assets/food_icons/chicken.png'),
+  salad: require('../../assets/food_icons/salad.png'),
+  sandwich: require('../../assets/food_icons/sandwich.png'),
+  omelette: require('../../assets/food_icons/omelette.png'),
 };

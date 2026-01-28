@@ -3,6 +3,7 @@ export interface Food {
   name: string;
   color: string;
   iconSource: any; // PNG image require source
+  imageSource?: any; // Optional ilustrative image for recipe
   isDefault: boolean;
   isActive: boolean; // Whether this food is active on the wheel
   recipe?: Recipe;
@@ -11,6 +12,8 @@ export interface Food {
 export interface Recipe {
   ingredients: string[];
   steps: string[];
+  time: string; // Tiempo estimado (ej: "30 minutos")
+  difficulty: 'Fácil' | 'Media' | 'Difícil'; // Nivel de dificultad
 }
 
 export interface SpinData {
