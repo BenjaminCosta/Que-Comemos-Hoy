@@ -12,14 +12,15 @@ export const LoadingIndicator: React.FC = () => {
       Animated.loop(
         Animated.sequence([
           Animated.delay(delay),
-          Animated.timing(dotAnim, {
+          Animated.spring(dotAnim, {
             toValue: 1,
-            duration: 400,
+            friction: 3,
+            tension: 40,
             useNativeDriver: true,
           }),
           Animated.timing(dotAnim, {
             toValue: 0,
-            duration: 400,
+            duration: 300,
             useNativeDriver: true,
           }),
         ])
@@ -27,20 +28,26 @@ export const LoadingIndicator: React.FC = () => {
     };
 
     animateDot(dot1, 0);
-    animateDot(dot2, 150);
-    animateDot(dot3, 300);
+    animateDot(dot2, 200);
+    animateDot(dot3, 400);
   }, []);
 
   const createDotStyle = (dotAnim: Animated.Value) => ({
     opacity: dotAnim.interpolate({
       inputRange: [0, 1],
-      outputRange: [0.3, 1],
+      outputRange: [0.4, 1],
     }),
     transform: [
       {
         scale: dotAnim.interpolate({
           inputRange: [0, 1],
-          outputRange: [0.8, 1.2],
+          outputRange: [0.6, 1.4],
+        }),
+      },
+      {
+        translateY: dotAnim.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, -10],
         }),
       },
     ],
@@ -60,12 +67,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    height: 40,
   },
   dot: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    width: 16,
+    height: 16,
+    borderRadius: 8,
     backgroundColor: theme.colors.primary,
-    marginHorizontal: 4,
+    marginHorizontal: 6,
   },
 });

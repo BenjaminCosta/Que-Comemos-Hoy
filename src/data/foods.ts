@@ -40,6 +40,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '20 minutos',
       difficulty: 'Fácil',
+      servings: '4 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -67,6 +69,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '30 minutos',
       difficulty: 'Fácil',
+      servings: '4-6 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -95,6 +99,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '45 minutos',
       difficulty: 'Media',
+      servings: '12 empanadas',
+      type: 'Plato principal',
     },
   },
   {
@@ -120,6 +126,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '15 minutos',
       difficulty: 'Fácil',
+      servings: '4-5 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -149,6 +157,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '50 minutos',
       difficulty: 'Media',
+      servings: '4-6 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -176,6 +186,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '40 minutos',
       difficulty: 'Fácil',
+      servings: '6-8 porciones',
+      type: 'Plato principal',
     },
   },
   {
@@ -202,6 +214,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '45 minutos',
       difficulty: 'Media',
+      servings: '4-5 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -229,6 +243,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '60 minutos',
       difficulty: 'Difícil',
+      servings: '20-25 piezas',
+      type: 'Plato principal',
     },
   },
   {
@@ -257,6 +273,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '25 minutos',
       difficulty: 'Fácil',
+      servings: '4 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -285,6 +303,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '25 minutos',
       difficulty: 'Fácil',
+      servings: '4 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -313,6 +333,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '15 minutos',
       difficulty: 'Fácil',
+      servings: '4 personas',
+      type: 'Comida rápida',
     },
   },
   {
@@ -341,6 +363,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '45 minutos',
       difficulty: 'Fácil',
+      servings: '4 personas',
+      type: 'Plato principal',
     },
   },
   {
@@ -370,6 +394,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '10 minutos',
       difficulty: 'Fácil',
+      servings: '4 personas',
+      type: 'Ensalada / Guarnición',
     },
   },
   {
@@ -398,6 +424,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '10 minutos',
       difficulty: 'Fácil',
+      servings: '1-2 personas',
+      type: 'Comida rápida',
     },
   },
   {
@@ -425,6 +453,8 @@ export const DEFAULT_FOODS: Food[] = [
       ],
       time: '10 minutos',
       difficulty: 'Fácil',
+      servings: '1 persona',
+      type: 'Desayuno / Cena ligera',
     },
   },
 ];

@@ -14,6 +14,8 @@ export interface Recipe {
   steps: string[];
   time: string; // Tiempo estimado (ej: "30 minutos")
   difficulty: 'Fácil' | 'Media' | 'Difícil'; // Nivel de dificultad
+  servings: string; // Cantidad de personas (ej: "4 personas")
+  type: string; // Tipo de receta (ej: "Plato principal", "Entrada", etc.)
 }
 
 export interface SpinData {

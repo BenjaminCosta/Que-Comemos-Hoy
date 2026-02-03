@@ -11,9 +11,9 @@ export const loadFoods = async (): Promise<Food[]> => {
     const data = await AsyncStorage.getItem(FOODS_KEY);
     if (data) {
       const loadedFoods = JSON.parse(data);
-      // Merge with DEFAULT_FOODS to get updated fields (like imageSource)
+      
+      // PASO 1: Merge/actualizar comidas existentes con datos nuevos de DEFAULT_FOODS
       const mergedFoods = loadedFoods.map((savedFood: Food) => {
-        // Find matching default food to get updated data
         const defaultFood = DEFAULT_FOODS.find(df => df.id === savedFood.id);
         
         if (defaultFood) {
@@ -32,9 +32,18 @@ export const loadFoods = async (): Promise<Food[]> => {
         };
       });
       
-      // Save merged data back to storage
-      await saveFoods(mergedFoods);
-      return mergedFoods;
+      // PASO 2: Agregar comidas nuevas de DEFAULT_FOODS que no existen en el storage
+      const existingIds = new Set(mergedFoods.map((f: Food) => f.id));
+      const newFoods = DEFAULT_FOODS.filter(df => !existingIds.has(df.id)).map(nf => ({
+        ...nf,
+        isActive: false, // Nuevas comidas inactivas por defecto
+      }));
+      
+      const completeFoods = [...mergedFoods, ...newFoods];
+      
+      // Save updated data back to storage
+      await saveFoods(completeFoods);
+      return completeFoods;
     }
     // First time: randomize 5 active foods and save
     const randomizedFoods = randomizeFiveActiveFoods(DEFAULT_FOODS);

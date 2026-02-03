@@ -175,6 +175,31 @@ export const RecipeDetailScreen: React.FC<Props> = ({ navigation, route }) => {
             </View>
           </View>
 
+          {/* Badges de porciones y tipo */}
+          <View style={styles.badgesContainer}>
+            <View style={[styles.badge, styles.servingsBadge]}>
+              <MaterialCommunityIcons
+                name="account-group-outline"
+                size={20}
+                color={food.color}
+              />
+              <Text style={[styles.badgeText, { color: food.color }]}>
+                {food.recipe.servings}
+              </Text>
+            </View>
+
+            <View style={[styles.badge, styles.typeBadge]}>
+              <MaterialCommunityIcons
+                name="food-variant"
+                size={20}
+                color={food.color}
+              />
+              <Text style={[styles.badgeText, { color: food.color }]}>
+                {food.recipe.type}
+              </Text>
+            </View>
+          </View>
+
           {/* Sección Ingredientes */}
           <Card style={styles.section}>
             <View style={[styles.sectionHeader, { borderLeftColor: food.color }]}>
@@ -340,6 +365,12 @@ const styles = StyleSheet.create({
   difficultyBadge: {
     // borderColor aplicado dinámicamente
   },
+  servingsBadge: {
+    borderColor: 'transparent',
+  },
+  typeBadge: {
+    borderColor: 'transparent',
+  },
   badgeText: {
     fontSize: 14,
     fontFamily: 'Nunito_700Bold',
@@ -364,7 +395,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: theme.spacing.md,
     paddingHorizontal: theme.spacing.lg,
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    backgroundColor: 'rgba(245, 245, 245, 0.9)',
     borderLeftWidth: 4,
     // borderLeftColor aplicado dinámicamente
   },
@@ -376,6 +407,8 @@ const styles = StyleSheet.create({
   },
   sectionContent: {
     padding: theme.spacing.lg,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+
   },
 
   // Lista de ingredientes
